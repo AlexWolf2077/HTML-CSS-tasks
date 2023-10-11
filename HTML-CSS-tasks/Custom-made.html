@@ -13,73 +13,117 @@
 </head>
 <body>
     <header>
-        <a href="Master_classes.html">Мастер-классы</a>
-        <a href="Custom-made.html">Мебель на заказ</a>
-        <a href="index.html"><img src="img/Logo_1.png" alt="лого"></a>
-        <a href="#">Контакты</a>
-        <a href="About_Us.html">О нас</a>
+        <nav class="nav">
+            <a class="nav__link" href="Master_classes.html">Мастер-классы</a>
+            <a class="nav__link active" href="Custom-made.html">Мебель на заказ</a>
+            <a class="nav__link" href="index.html"><img src="img/Logo_1.png" alt="лого"></a>
+            <a class="nav__link" href="#">Контакты</a>
+            <a class="nav__link" href="About_Us.html">О нас</a> 
+        </nav>
     </header>
 <main>
 <section>
-    <p>Воплотим вашу любую задумку в реальность</p>
-    <h1>Столярная мастерская </h1>
-    <h1>NIKASON BRAND</h1>
-    <input type="submit" value="Заказать мебель">
+    <div class="info_background">
+        <div class="info_background_text">
+            <p>Воплотим вашу любую задумку в реальность</p>
+            <h4>Столярная мастерская</h4>
+            <h4>NIKASON BRAND</h4>
+    <input class="input_background" type="submit" value="Заказать мебель"> 
+        </div> 
+    </div> 
 </section>
 <section>
     <h2>Почему выбирают нас</h2>
-    <table>
-        <td><h3>Давно на рынке</h3><p>Опыт работы на рынке больше 10 лет</p></td>
-        <td><h3>Гарантия качества</h3><p>Предоставляем гарантию 12 месяцев на изделия </p></td>
-        <td><h3>Юридическая прозрачность</h3><p>Заключаем с каждым клиентом договор</p></td>
-        <tr>
-            <td><h3>Экологичность</h3><p>Мебель из натуральной древесины, краски без токсичного состава</p></td>
-            <td><h3>Эксклюзивность</h3><p>Каждая мебель изготовлена по индивидуальному дизайну </p></td>
-            <td><h3>Долговечность</h3><p>Мебель из массива дерева прослужит даже вашим детям</p></td>
-        </tr>
-    </table>
+    <ul class="choice">
+        <li class="choice_us">
+            <div class="choice_us">
+                <h3 class="Advantages_item">Давно на рынке</h3>
+                <p>Опыт работы на рынке <br> больше 10 лет</p>                
+            </div>
+            <div class="choice_us">
+                <h3 class="Advantages_item">Экологичность</h3>
+                <p>Мебель из натуральной древесины, <br> краски без токсичного состава</p>
+            </div>
+        </li>
+        <li class="choice_us">
+            <div class="choice_us">
+               <h3 class="Advantages_item">Гарантия качества</h3>
+               <p>Предоставляем гарантию <br> 12 месяцев на изделия </p>                 
+            </div>
+            <div class="choice_us">
+                <h3 class="Advantages_item">Эксклюзивность</h3>
+                <p>Каждая мебель изготовлена по <br> индивидуальному дизайну </p>
+            </div>
+        </li>
+        <li class="choice_us">
+            <div class="choice_us">
+                <h3 class="Advantages_item">Юридическая прозрачность</h3>
+                <p>Заключаем с каждым клиентом <br> договор</p>
+            </div>
+            <div class="choice_us">
+                <h3 class="Advantages_item">Долговечность</h3>
+                <p>Мебель из массива дерева <br> прослужит даже вашим детям</p>  
+            </div>
+        </li>
+    </ul>
 </section>
 <section>
     <h2>Портфолио</h2>
-    <img src="img/furniture_21.png" >
-    <table>
-        <td><img src="img/arrow_1.png" ></td>
-        <td><img src="img/furniture_22.png" ></td>
-        <td><img src="img/furniture_23.png" ></td>
-        <td><img src="img/furniture_24.png" ></td>
-        <td><img src="img/furniture_25.png" ></td>
-        <td><img src="img/furniture_26.png" ></td>
-        <td><img src="img/furniture_27.png" ></td>
-        <td><img src="img/furniture_28.png" ></td>
-        <td><img src="img/arrow_2.png" ></td>
-    </table>
+    <div>
+        <img src="img/furniture_21.png" >
+    </div>    
+    <div class="gallery">  
+        <a href="#"><img src="img/arrow_1.png" height="50" ></a>
+        <img src="img/furniture_22.png" >
+        <img src="img/furniture_23.png" >
+        <img src="img/furniture_24.png" >
+        <img src="img/furniture_25.png" >
+        <img src="img/furniture_26.png" >
+        <img src="img/furniture_27.png" >
+        <img src="img/furniture_28.png" >
+        <a href="#"><img src="img/arrow_2.png" height="50" ></a>
+    </div>
 </section>
 <section>
     <h2>Этапы производства</h2>
-    <table>
-        <td><h2>1</h2><p>Встреча с клиентом</p></td>
-        <td><h2>2</h2><p>Подписание договора, внесение предоплаты</p></td>
-        <td><h2>3</h2><p>Выезд к клиенту на замер (при необходимости)</p></td>
-        <tr>
-            <td><h2>4</h2><p>Составление проекта</p></td>
-            <td><h2>5</h2><p>Изготовление и согласование всех стадий с клиентом</p></td>
-            <td><h2>6</h2><p>Доставка и монтаж изделия (при необходимости)</p></td>
-        </tr>
-    </table>
+    <div class="produce_frame_top">
+        <div class="produce_about">
+            <h2 class="right">1</h2><p>Встреча с клиентом</p>
+        </div>
+        <div class="produce_about">
+            <h2 class="right">2</h2><p>Подписание договора, внесение предоплаты</p>
+        </div>
+        <div class="about">
+            <h2 class="right">3</h2><p>Выезд к клиенту на замер (при необходимости)</p>
+        </div>
+    </div>
+    <div class="produce_frame_bottom">
+        <div class="produce_about">
+            <h2 class="right">4</h2><p>Составление проекта</p>
+        </div>
+        <div class="produce_about">
+            <h2 class="right">5</h2><p>Изготовление и согласование всех стадий с клиентом</p>
+        </div>
+        <div class="about">    
+            <h2 class="right">6</h2><p>Доставка и монтаж изделия (при необходимости)</p>
+        </div>
+    </div>
 </section>
 <section>
     <h2>Клиенты о нас</h2>
-    <table>
-        <td><img src="img/Comment_1.png" ></td>
-        <td><img src="img/Comment_2.png" ></td>
-        <td><img src="img/Comment_3.png" ></td>
-        <td><img src="img/Comment_4.png" ></td>
-        <td><img src="img/Comment_5.png" ></td>
-    </table>
+    <div class="gallery">
+        <img src="img/Comment_1.png" height="400">
+        <img src="img/Comment_2.png" height="400">
+        <img src="img/Comment_3.png" height="400">
+        <img src="img/Comment_4.png" height="400">
+        <img src="img/Comment_5.png" height="400">
+    </div>
 </section>
 <section>
     <h2>Оставьте заявку и мы с вами свяжемся</h2>
-    <input type="submit" value="Оставить заявку">
+    <div class="Management">       
+    <input type="submit" value="Оставить заявку"> 
+    </div>
 </section>
 </main>
 <footer>  

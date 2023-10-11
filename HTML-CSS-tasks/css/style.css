@@ -1,15 +1,17 @@
-header {
+  /* Общие */
+.nav {
   display: flex;
-  flex-direction:  row;
+  flex-direction: row;
   padding: 30px;
   justify-content: center;
   align-items: center;
   gap: 150px;
+  border-bottom: 3px solid #715B4B;
   }
 body {  background-color:#F3EFEA; }
   p,a {
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     color: #323232;
     max-width: 746px;
     }
@@ -20,16 +22,29 @@ body {  background-color:#F3EFEA; }
         margin: 0px;
       }
       h2 {
+          display: flex;
+          justify-content: center;
           font-family: 'Tenor Sans', sans-serif;
           font-size: 48px;
+          font-weight: 400;
           color: #57463A;
-          padding: 50px 0px 50px 440px;
+          padding: 50px 0px 50px 0px;
         }
       h3 {
           font-family: 'Tenor Sans', sans-serif;
           font-size: 24px;
           color: #57463A;
         }
+      h4 {
+        font-family: 'Tenor Sans', sans-serif;
+        font-size: 48px;
+        font-weight: 400;
+        color: #F6F6F6;
+        margin: 0px;
+        max-width: 1100px;
+        line-height: 80px;
+        text-align: center;
+       } 
 input {
        width: 245px;
        height: 60px;
@@ -42,76 +57,118 @@ input {
        font-size: 16px;
        line-height: 150%;
        color: #F6F6F6;
-      }    
+      }
+      .input_background   {
+        color: #4C6D77;
+        background: #F6F6F6;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+      }
 div {
       display: flex;
       justify-content: center;
     }
-  .top {
+  .img { display:inline-block;
+      line-height: 0;
+     }
+  .right {
+      justify-content: flex-end;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+     }
+  .Advantages_item { /* Черта под текстом */
+      display:inline-block;
+      border-bottom: 3px solid #715B4B;
+      max-width: 300px;
+      text-align: center;
+      line-height: 35px;
+    }
+  .wide_container { /* контейнер для картинки и текста */
+      display: flex;
+      justify-content: center;
+      line-height: 100px; /* межстрочный интервал */
+      }
+/* Главная страница */
+  .main_info {
         display: flex;
-        border-top: 3px solid #715B4B;
         border-bottom: 3px solid #715B4B;
-        margin: 0px 200px 0px 200px;
         justify-content: center;
         line-height: 100px; 
       }
-    .wide_container {
-        display: flex;
-        justify-content: center;
-        line-height: 100px;
-    }
-  .right {
-          justify-content: flex-end;
-          gap: 20px;
-         }
-  .line {
-      justify-content: center;
-      align-items: center;
-      gap: 150px;
-      line-height: 50px; 
-      }
-    .Advantages_item {
-      border-bottom: 3px solid #715B4B;
-      max-width: 280px;
-      text-align: center;
-      line-height: 35px;
-    }  
-  .about { display:inline-block; 
-          padding: 30px;
-          text-align: center;
-        }   
-  .img { display:inline-block;
-        line-height: 0;
-       }
-  .text { display:inline-block; 
+      .main_info_text { display:inline-block; 
         padding-left: 50px; 
         justify-content: center;
         }
-  .text1 { 
+  .list_line { /* NIKASON BRAND это */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 150px;
+          line-height: 50px;
+          }
+      /* Более 10 лет мы производим */
+  .produce_frame_top {
+    border: 3px solid #715B4B;
+    margin: 0px 600px 0px 600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    } 
+    .produce_frame_bottom {
+      border-left: 3px solid #715B4B;
+      border-right: 3px solid #715B4B;
+      border-bottom: 3px solid #715B4B;
+      margin: 0px 600px 0px 600px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      gap: 30px;
+      }
+      .produce_about { 
+        display:inline-block; 
+        padding: 30px;
+        text-align: center;
+        border-right: 3px solid #715B4B;
+        } 
+      .about {
+        display:inline-block; 
+        padding: 30px;
+        text-align: center;
+        }
+    /* NIKASON BRAND это семейная мастеркая */
+  .text_workers { 
       display:inline-block; 
-      padding: 20px; 
+      padding: 50px; 
       line-height: 50px; 
       background-color: #EBEEEB;
       }
-  .text2 {
-      display:inline-block; 
-      padding: 20px; 
-      line-height: 50px; 
-      background-color: #E3DACE;
-      } 
-  .text3 {
-      display:inline-block; 
-      padding: 20px; 
-      line-height: 50px; 
-      background-color: #D4CDC3;
-        }
-  .frame_external {
+  /* Наши услуги */
+  .text_sink {
+    display:inline-block; 
+    padding: 50px; 
+    line-height: 50px; 
+    background-color: #E3DACE;
+    } 
+  .text_cabinets {
+    display:inline-block; 
+    padding: 50px; 
+    line-height: 50px; 
+    background-color: #D4CDC3;
+    }
+  /* Гарантия качества */
+  .frame_external { /* зеленая рамка */
     border: 7px solid #a1b29f;
     box-sizing: border-box;
     padding: 14px;
     margin: 60px 520px 60px 520px;
-  }      
-  .frame { 
+    }
+    .frame { 
       display: flex;
       flex-direction: column;
       border: 1px solid #715B4B;
@@ -119,12 +176,155 @@ div {
       }
       .title { 
         font-family: 'Tenor Sans', sans-serif;
-          font-size: 48px;
-          color: #57463A;
-          padding: 50px;
-      }
+        font-size: 48px;
+        color: #57463A;
+        padding: 50px;
+        }
       .guarantee { font-size: 24px; }
-  /*  */
+/* Мастер-классы */
+  .main_info_background {
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/background_1.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; /* Скроллинг фона */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 250px;
+    }    
+    .main_info_background_text {
+      display: flex;
+      flex-direction: column;
+      gap: 150px;
+      align-items: center;            
+      }
+  /* техники на МК */
+.technologies_div {
+  padding: 0 0 70px;
+  }
+  .technologies {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    }
+  .technologies > li {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    z-index: 21;
+    }
+    .circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #A1B29F;
+      color: #F6F6F6;
+      font-family: 'Open Sans';
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      }
+  /* Подари вторую жизнь*/
+  .background_call {
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/background_2.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 250px;
+    }
+  /* Руководство по редизайну */
+  .Management {
+    margin: 70px 0 70px;
+    }
+    .text_Management {
+      display:inline-block; 
+      padding: 20px; 
+      line-height: 50px; 
+      }
+/* Мебель на заказ */
+  .info_background {
+        display: flex;
+        justify-content: center;
+        background-image: url(../img/background_3.png);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        padding: 250px;
+        }
+      .info_background_text {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;  
+        }
+      .info_background_text > p {
+        color: #F6F6F6;
+      }
+    .choice {
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+        }
+      .choice_us {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        }
+  .gallery {
+    display: flex;
+    gap: 15px;
+    padding: 20px 0 10px;
+  }
+/* О нас */
+  .workers {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 100px;
+  }
+  .How_many {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    text-align: center;
+  }
+  .How_many > li > h2 {
+    margin: 0;
+  }
+  .How_many > li {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+  .text_Founder {
+    display:inline-block; 
+    padding-left: 50px; 
+    line-height: 40px; 
+  }
+  .text_Founder > p {    
+    color: #000;
+  }
+  .Philosophy {
+    text-align: end;
+    color: #323232;
+    text-align: right;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+  }
+/* Подвал */
 footer {
         background: #715B4B;
         padding: 50px;
