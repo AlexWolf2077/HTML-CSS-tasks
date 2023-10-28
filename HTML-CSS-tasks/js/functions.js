@@ -1,4 +1,5 @@
  /* Функция для проверки, является ли строка палиндромом */
+ console.log("палиндромом");
 function isPalindrome(str) {
     // Преобразуем строку в нижний регистр и удаляем все пробелы
     str = str.toLowerCase().replace(/\s/g, '');  
@@ -12,6 +13,7 @@ function isPalindrome(str) {
  извлекается в ней цифры от 0 до 9 
  и возвращает их в виде целого положительного числа. 
  Если в строке нет ни одной цифры, то вернуть Nan */
+ console.log("принимает строку,  извлекается в ней цифры от 0 до 9  и возвращает их в виде целого положительного числа");
   function extractNumbers(str) { 
     // Ищем все цифры в строке
     const regex = /\d+/g;
@@ -29,15 +31,16 @@ function isPalindrome(str) {
   Символы добавляются в начало строки. 
   Если исходная строка превышает заданную длину, она не должна обрезаться. 
   Если «добивка» слишком длинная, она обрезается с конца. */
+  console.log("принимает исходную строку, минимальную длину и строку с добавочными символами — и возвращает исходную строку");
   function addPadding(str, minLength, padding) {
     if (str.length >= minLength) {
       return str;
-    }    
+    }
     const paddingLength = minLength - str.length;
     const repeatedPadding = padding.repeat(Math.ceil(paddingLength / padding.length));
     const trimmedPadding = repeatedPadding.slice(0, paddingLength);    
     return trimmedPadding + str;
-  }  
+  }
   console.log(addPadding('1', 2, '0'));      // '01'
   console.log(addPadding('1', 4, '0'));      // '0001'
   console.log(addPadding('q', 4, 'werty'));  // 'werq'
@@ -48,9 +51,10 @@ function isPalindrome(str) {
    и максимальную длину и возвращает true, 
    если строка меньше или равна указанной длине, 
    и false, если строка длиннее. */
+   console.log("принимает строку, которую нужно проверить, и максимальную длину и возвращает true, если строка меньше или равна указанной длине, и false, если строка длиннее.");
    function checkStringLength(str, maxLength) {
     return str.length <= maxLength;
-  }  
+  }
   console.log(checkStringLength('проверяемая строка', 20)); // true
   console.log(checkStringLength('проверяемая строка', 18)); // true
   console.log(checkStringLength('проверяемая строка', 10)); // false

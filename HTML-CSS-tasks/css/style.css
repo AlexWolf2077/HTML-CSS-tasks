@@ -334,7 +334,39 @@ div {
     display: flex;
     gap: 15px;
     padding: 20px 0 10px;
+    align-items: center;
   }
+  .gallery__photo-full {
+    justify-content: center;
+  }
+  .gallery__photo-previews {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    width: 550px;
+    padding: 0;
+    justify-content: center;
+  }  
+  .gallery__photo-preview {
+    padding: 10px;
+    border: 0;
+    border-radius: 0;
+    background: none;
+  }  
+  .gallery__photo-preview:hover,
+  .gallery__photo-preview:focus {
+    opacity: 0.7;
+  }  
+  .gallery__photo-preview {
+    display: block;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+  }  
+  .gallery__photo-preview--active {
+    outline: 5px solid red;
+    outline-offset: -5px;
+  }  
   /* Этапы производства */
   .stages_produce_about { 
     display: flex;
