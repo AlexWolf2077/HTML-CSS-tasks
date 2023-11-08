@@ -3,21 +3,41 @@ const fullPhoto = document.querySelector('.full-photo');
 const thumbnails = document.querySelectorAll('.gallery__photo-preview');
 const arrow1 = document.querySelector('.gallery__photo-previews a:first-child');
 const arrow2 = document.querySelector('.gallery__photo-previews a:last-child');
-arrow1.addEventListener('click', function(event) {
+arrow1.addEventListener('click', function(event) { // Добавляем обработчик события для кнопки "Стрелка влево"
+  event.preventDefault();
+  const firstThumbnail = thumbnails[0];
+
+  // Смещаем все миниатюры влево
+  for (let i = 0; i < thumbnails.length - 1; i++) {
+    thumbnails[i].parentNode.insertBefore(thumbnails[i + 1], thumbnails[i]);
+  }
+  // Перемещаем первый элемент в конец
+  thumbnails[thumbnails.length - 1].parentNode.insertBefore(firstThumbnail, thumbnails[thumbnails.length - 1].nextSibling);
+
+
+});
+arrow2.addEventListener('click', function(event) { // Добавляем обработчик события для кнопки "Стрелка вправо"
   event.preventDefault();
   const firstThumbnail = thumbnails[0];
   const lastThumbnail = thumbnails[thumbnails.length - 1];
+  // Смещаем все миниатюры вправо 
+  for (let i = thumbnails.length - 1; i > 0; i--) { thumbnails[i].parentNode.insertBefore(thumbnails[i], thumbnails[i - 1]); }
+  // Смещаем теги элементов 
   lastThumbnail.parentNode.insertBefore(firstThumbnail, lastThumbnail.nextSibling);
 });
-arrow2.addEventListener('click', function(event) {
+arrow1.addEventListener('click', function(event) { // Добавляем обработчик события для кнопки "Стрелка влево"
   event.preventDefault();
   const firstThumbnail = thumbnails[0];
-  const lastThumbnail = thumbnails[thumbnails.length - 1];
-  firstThumbnail.parentNode.insertBefore(lastThumbnail, firstThumbnail);
+  // Смещаем все миниатюры влево
+  for (let i = 0; i < thumbnails.length - 1; i++) {
+    thumbnails[i].parentNode.insertBefore(thumbnails[i + 1], thumbnails[i]);
+  }
+  // Перемещаем первый элемент в конец
+  thumbnails[thumbnails.length - 1].parentNode.insertBefore(firstThumbnail, thumbnails[thumbnails.length - 1].nextSibling);
 });
-for (let i = 0; i < thumbnails.length; i++) {
+for (let i = 0; i < thumbnails.length; i++) { // Добавление обработчиков события клика на все элементы миниатюр
   thumbnails[i].addEventListener('click', function() {
-    fullPhoto.src = thumbnails[i].src;
+    fullPhoto.src = thumbnails[i].src; // Установка источника полного фото на источник кликнутой миниатюры
   });
 }
 
